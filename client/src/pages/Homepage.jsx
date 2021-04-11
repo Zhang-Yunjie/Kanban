@@ -30,7 +30,7 @@ const Homepage = () => {
             <div className={"row"}>
                 {statuses.map(s => {
                     return (
-                        <div key={status} className={"col-wrapper"}>
+                        <div key={s.status} className={"col-wrapper"}>
                             <h2 className={"col-header"}>{s.status.toUpperCase()}</h2>
                             <DropWrapper onDrop={onDrop} status={s.status}>
                                 <Col>

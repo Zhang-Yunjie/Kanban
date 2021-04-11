@@ -19,7 +19,7 @@ const Item = ({ item, index, moveItem, status}) => {
                 return;
             }
 
-            const hoveredRect = ref.current.getBoundClientRect();
+            const hoveredRect = ref.current.getBoundingClientRect();
             const hoverMiddleY = (hoveredRect.bottom - hoveredRect.top) / 2;
             const mousePosition = monitor.getClientOffset();
             const hoverClientY = mousePosition.y - hoveredRect.top;
@@ -66,7 +66,7 @@ const Item = ({ item, index, moveItem, status}) => {
                 className = {"item"}
                 onClick = {onOpen}
             >
-                <div className = {"color-bar"} style = {{backgroundcolor: status.color}} />
+                <div className = {"color-bar"} style = {{backgroundColor: status.color}} />
                 <p className={"item-title"}>{item.content}</p>
                 <p className={"item-status"}>{item.icon}</p>
             </div>
